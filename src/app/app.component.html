@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    <h1>
+        {{ title }}
+    </h1>
+</div>
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <div class="input-group-prepend">
+        <input type="text" class="form-control" placeholder="Search gif's" name="searchString" formControlName="searchString">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+<div class="center">
+    <ul>
+        <li *ngFor="let gif of giphies">
+            <img src="{{gif.images.original.url}}" ng-click="$scope.toggleSize()" class="tn" width="300" height="200">
+        </li>
+    </ul>
+</div>
+<!-- <div *ngFor="let g of giphies">
+    <img src="{{g.images.original.url}}">
+</div> -->
