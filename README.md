@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 you change any of the source files.
 
 ## Running Video
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/https://youtu.be/44gykCZ-PHM&feature=youtu.be.jpg)](http://www.youtube.com/watch?v=44gykCZ-PHM&feature=youtu.be)
+[![Gif](http://img.youtube.com/vi/https://44gykCZ-PHM/0.jpg)](http://www.youtube.com/watch?v=44gykCZ-PHM)
 
 ## Approach
 I have worked with Angular JS, that's why I chose to develope this giphy search application in Angular JS. To implement it smoothly and efficiently.
