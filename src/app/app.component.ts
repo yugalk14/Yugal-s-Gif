@@ -38,18 +38,24 @@ export class AppComponent {
     else{
       var apiLink = this.link + result.searchString;
       // GET Method, response has been used as res
-      this.http.request(apiLink).subscribe((res: Response) => {
-        // Storing all the results into a variable
-        // As discussed with Kevin
-        // If we collect all results first then do the paint at HTML
-        // It will cause lesser reflow and more efficient
-        this.giphies = res.json().data;
-
-        // If no result found then acknowledge the user.
-        if (this.giphies.length==0){
-          swal("Oops!", "No gif's found for given input : " + result.searchString, "error");
-        }
-      });
+      try{
+        this.http.request(apiLink).subscribe((res: Response) => {
+          // Storing all the results into a variable
+          // As discussed with Kevin
+          // If we collect all results first then do the paint at HTML
+          // It will cause lesser reflow and more efficient
+          this.giphies = res.json().data;
+  
+          // If no result found then acknowledge the user.
+          if (this.giphies.length==0){
+            swal("Oops!", "No gif's found for given input : " + result.searchString, "error");
+          }
+        });
+      }
+      catch(err){
+        console.log("Unexpected Error occured: "+err);
+        swal("Oops!", "Unexpected error Occured, Please try later.", "error");
+      }
     }
   }
 }

@@ -28,7 +28,7 @@ I started with building the application with creating a skeleton angular project
 - if its not empty then by using HTTP module of Angular
 - Calling the giphy api with generated key and searchString
 - Sending the result to front end for displaying
-
+- Handled unexpected error with try-catch block for smooth user experience.
 
 ## Code scaffolding
 
