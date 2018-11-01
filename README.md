@@ -10,6 +10,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if
 you change any of the source files.
 
+## Running Video
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/https://youtu.be/44gykCZ-PHM/0.jpg)](http://www.youtube.com/watch?v=https://youtu.be/44gykCZ-PHM)
+
 ## Approach
 I have worked with Angular JS, that's why I chose to develope this giphy search application in Angular JS. To implement it smoothly and efficiently.
 
