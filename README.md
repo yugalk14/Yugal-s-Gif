@@ -4,7 +4,31 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Angular is required to run this application - you can check with ng version
+1. Clone the Repo
+2. npm install - to install all dependencies and environment
+2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if
+you change any of the source files.
+
+## Approach
+I have worked with Angular JS, that's why I chose to develope this giphy search application in Angular JS. To implement it smoothly and efficiently.
+
+I started with building the application with creating a skeleton angular project.
+
+### Front End
+- Added text box and search box in the html component,
+- Used css to give text size and make it on center,
+- Displaying all results with the help of unordered list,
+- With use of CSS made all elements centered to the screen,
+- Injected media screen property for better visibility in different screen sizes
+- Used Transform property for enlarging hovered gif.
+
+### Back End
+- Taking the search string from front end,
+- if its not empty then by using HTTP module of Angular
+- Calling the giphy api with generated key and searchString
+- Sending the result to front end for displaying
+
 
 ## Code scaffolding
 

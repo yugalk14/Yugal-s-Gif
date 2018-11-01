@@ -1,24 +1,29 @@
-<head>
-    <title>MyApp</title>
-</head>
 <div style="text-align:center">
+    <!-- Title is binding with the help of angular {{ }} -->
     <h1>
         {{ title }}
     </h1>
 </div>
+<!-- Created a form for input textbox and Search button 
+     -> with use of onFocus, empty the textbox area whenever user click at textbox for re-entry
+     -> with use of placeholder, Provided default user guidance
+-->
+
 <form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
     <div>
-        <input type="text" class="form-control" placeholder="Search gif's" name="searchString" formControlName="searchString">
-        <input type="submit" class="form-control" value="Submit">
+        <input type="text" class="form-control" onfocus="this.value=''" placeholder="Search gif's" name="searchString" formControlName="searchString">
+        <input type="submit" class="form-control" value="Search">
     </div>
 </form>
+
+<!-- Invoking giphies as result from backend.
+     -> For each gif element
+        -> display the gif with size of 200*150
+ -->
 <div class="center">
     <ul>
         <li *ngFor="let gif of giphies">
-            <img src="{{gif.images.original.url}}" class="tn" width="200" height="150">
+            <img src="{{gif.images.original.url}}" class="image_class" width="200" height="150">
         </li>
     </ul>
 </div>
-<!-- <div *ngFor="let g of giphies">
-    <img src="{{g.images.original.url}}">
-</div> -->
